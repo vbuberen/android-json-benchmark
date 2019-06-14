@@ -1,0 +1,2 @@
+include ':app', ':json', ':benchmark'
+rootProject.name='JsonBenchmarks'
