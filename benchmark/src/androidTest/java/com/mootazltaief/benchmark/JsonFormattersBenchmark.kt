@@ -4,108 +4,108 @@ import androidx.benchmark.junit4.BenchmarkRule
 import androidx.benchmark.junit4.measureRepeated
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.mootazltaief.json.gson.GsonParser
-import com.mootazltaief.json.jackson.JacksonParser
-import com.mootazltaief.json.kotlinx.KotlinParser
-import com.mootazltaief.json.moshi.MoshiParser
+import com.mootazltaief.json.gson.GsonFormatter
+import com.mootazltaief.json.jackson.JacksonFormatter
+import com.mootazltaief.json.kotlinx.KotlinFormatter
+import com.mootazltaief.json.moshi.MoshiFormatter
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class JsonBenchmark {
+class JsonFormatersBenchmark {
 
     @get:Rule
     val benchmarkRule = BenchmarkRule()
 
     private val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-    private val gsonParser = GsonParser(appContext)
-    private val moshiParser = MoshiParser(appContext)
-    private val kotlinParser = KotlinParser(appContext)
-    private val jacksonParser = JacksonParser(appContext)
+    private val gsonFormatter = GsonFormatter(appContext)
+    private val moshiFormatter = MoshiFormatter(appContext)
+    private val kotlinFormatter = KotlinFormatter(appContext)
+    private val jacksonFormatter = JacksonFormatter(appContext)
 
 
     @Test
-    fun benchmarkGsonWithSample1() {
+    fun benchmarkGsonFormatSample1() {
         benchmarkRule.measureRepeated {
-            gsonParser.parseSample1()
+            gsonFormatter.formatSample1()
         }
     }
 
     @Test
-    fun benchmarkGsonWithSample2() {
+    fun benchmarkGsonFormatSample2() {
         benchmarkRule.measureRepeated {
-            gsonParser.parseSample2()
+            gsonFormatter.formatSample2()
         }
     }
 
     @Test
-    fun benchmarkGsonWithSample3() {
+    fun benchmarkGsonFormatSample3() {
         benchmarkRule.measureRepeated {
-            gsonParser.parseSample3()
+            gsonFormatter.formatSample3()
         }
     }
 
     @Test
-    fun benchmarkMoshiWithSample1() {
+    fun benchmarkMoshiFormatSample1() {
         benchmarkRule.measureRepeated {
-            moshiParser.parseSample1()
+            moshiFormatter.formatSample1()
         }
     }
 
     @Test
-    fun benchmarkMoshiWithSample2() {
+    fun benchmarkMoshiFormatSample2() {
         benchmarkRule.measureRepeated {
-            moshiParser.parseSample2()
+            moshiFormatter.formatSample2()
         }
     }
 
     @Test
-    fun benchmarkMoshiWithSample3() {
+    fun benchmarkMoshiFormatSample3() {
         benchmarkRule.measureRepeated {
-            moshiParser.parseSample3()
+            moshiFormatter.formatSample3()
         }
     }
 
     @Test
     fun benchmarkKotlinWithSample1() {
         benchmarkRule.measureRepeated {
-            kotlinParser.parseSample1()
+            kotlinFormatter.formatSample1()
         }
     }
 
     @Test
     fun benchmarkKotlinWithSample2() {
         benchmarkRule.measureRepeated {
-            kotlinParser.parseSample2()
+            kotlinFormatter.formatSample2()
         }
     }
 
     @Test
     fun benchmarkKotlinWithSample3() {
         benchmarkRule.measureRepeated {
-            kotlinParser.parseSample3()
+            kotlinFormatter.formatSample3()
         }
     }
 
     @Test
     fun benchmarkJacksonWithSample1() {
         benchmarkRule.measureRepeated {
-            jacksonParser.parseSample1()
+            jacksonFormatter.formatSample1()
         }
     }
 
     @Test
     fun benchmarkJacksonWithSample2() {
         benchmarkRule.measureRepeated {
-            jacksonParser.parseSample2()
+            jacksonFormatter.formatSample2()
         }
     }
 
     @Test
     fun benchmarkJacksonWithSample3() {
         benchmarkRule.measureRepeated {
-            jacksonParser.parseSample3()
+            jacksonFormatter.formatSample3()
         }
     }
 }
