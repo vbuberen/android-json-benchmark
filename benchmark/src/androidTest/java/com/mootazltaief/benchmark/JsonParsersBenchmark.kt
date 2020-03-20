@@ -26,84 +26,84 @@ class JsonParsersBenchmark {
 
 
     @Test
-    fun benchmarkGsonWithSample1() {
+    fun benchmarkGsonParseSample1() {
         benchmarkRule.measureRepeated {
             gsonParser.parseSample1()
         }
     }
 
     @Test
-    fun benchmarkGsonWithSample2() {
+    fun benchmarkGsonParseSample2() {
         benchmarkRule.measureRepeated {
             gsonParser.parseSample2()
         }
     }
 
     @Test
-    fun benchmarkGsonWithSample3() {
+    fun benchmarkGsonParseSample3() {
         benchmarkRule.measureRepeated {
             gsonParser.parseSample3()
         }
     }
 
     @Test
-    fun benchmarkMoshiWithSample1() {
+    fun benchmarkMoshiParseSample1() {
         benchmarkRule.measureRepeated {
             moshiParser.parseSample1()
         }
     }
 
     @Test
-    fun benchmarkMoshiWithSample2() {
+    fun benchmarkMoshiParseSample2() {
         benchmarkRule.measureRepeated {
             moshiParser.parseSample2()
         }
     }
 
     @Test
-    fun benchmarkMoshiWithSample3() {
+    fun benchmarkMoshiParseSample3() {
         benchmarkRule.measureRepeated {
             moshiParser.parseSample3()
         }
     }
 
     @Test
-    fun benchmarkKotlinWithSample1() {
+    fun benchmarkKotlinParseSample1() {
         benchmarkRule.measureRepeated {
             kotlinParser.parseSample1()
         }
     }
 
     @Test
-    fun benchmarkKotlinWithSample2() {
+    fun benchmarkKotlinParseSample2() {
         benchmarkRule.measureRepeated {
             kotlinParser.parseSample2()
         }
     }
 
     @Test
-    fun benchmarkKotlinWithSample3() {
+    fun benchmarkKotlinParseSample3() {
         benchmarkRule.measureRepeated {
             kotlinParser.parseSample3()
         }
     }
 
     @Test
-    fun benchmarkJacksonWithSample1() {
+    fun benchmarkJacksonParseSample1() {
         benchmarkRule.measureRepeated {
             jacksonParser.parseSample1()
         }
     }
 
     @Test
-    fun benchmarkJacksonWithSample2() {
+    fun benchmarkJacksonParseSample2() {
         benchmarkRule.measureRepeated {
             jacksonParser.parseSample2()
         }
     }
 
     @Test
-    fun benchmarkJacksonWithSample3() {
+    fun benchmarkJacksonParseSample3() {
         benchmarkRule.measureRepeated {
             jacksonParser.parseSample3()
         }
