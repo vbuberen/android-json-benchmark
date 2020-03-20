@@ -4,8 +4,8 @@ import android.content.Context
 import com.mootazltaief.json.Utils
 import com.mootazltaief.json.kotlinx.models.PhotosKotlin
 import com.mootazltaief.json.kotlinx.models.UserKotlin
+import kotlinx.serialization.builtins.list
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.list
 
 
 class KotlinParser(context: Context) {
