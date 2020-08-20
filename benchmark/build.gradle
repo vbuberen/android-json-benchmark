@@ -1,15 +1,17 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
+        testInstrumentationRunnerArgument 'androidx.benchmark.suppressErrors', 'EMULATOR,LOW_BATTERY'
         testInstrumentationRunner 'androidx.benchmark.junit4.AndroidBenchmarkRunner'
     }
 
@@ -30,7 +32,7 @@ android {
 dependencies {
     implementation project(":json")
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
